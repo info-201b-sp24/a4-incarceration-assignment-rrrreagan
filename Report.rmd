@@ -1,0 +1,81 @@
+---
+title: "A3: Incarceration"
+output: html_document
+---
+## Name: Reagan Ince
+
+### Introduction
+An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
+
+### Summary Information
+
+Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+
+These will likely be calculated using your DPLYR skills, answering questions such as:
+
+- What is the average value of my variable across all the counties (in the current year)?
+- Where is my variable the highest / lowest?
+- How much has my variable change over the last N years?
+
+Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
+
+As I reflect on the dataset focusing on crime rates, themes that I found most critical to highlight surround the discrepancy between different groups, namely differences among race, gender, location, etc. 
+
+The questions I asked are as follows: 
+1) What is the average value of those jailed across all the counties per year?
+2) What is year has the highest incarceration rate? (prison)
+3) What is the rate of male v. female incarceration? (prison)
+4) What is the which state has the highest rate of incarceration?
+5) What race is subjected to the highest incarceration rate?
+
+As I explored the answers to this question, I found that the average values of those jailed across all the counties per year begins at 64,951 and increases each year. Within this, I also found that 2007 is the year with the highest incarceration rate at 0.00413. Prison populations also tend to be primarily male, with a rate of male:female inmates in 2016 to be 1316:156. It was also found that Texas is the state with the highest rate of incarceration, and black people have the highest rate of incarceration. None of these findings particularly surprise me, rather it confirms many of the trends I have noticed in the larger socio-political network.
+
+```{r}
+source("./summary.R")
+```
+
+### The Dataset
+
+This data was collected by the Vera Institute of Justice. They generated this data by using data from the Bureau of Justice Statistics (BJS) collections: the Census of Jails (COJ), which encapsulates all jails and is conducted every five to eight years since 1970, and the Annual Survey of Jails (ASJ), which encapsulates about one-third of jails-and includes nearly all of the largest jails-that has been conducted in non-census years since 1982. They similarly drew from the BJS National Corrections Reporting Program (NCRP). These two data sets were based in jail/prison record maintenance and census data. 
+
+This data was collected in order to create additional robustness to data that allows researchers to draw conclusions about county level aspects of the data, rather than working at the state/country scale that other datasets require.
+
+Although I used various data sets in calculating this information, the one that includes most of the information I used in this analysis is prison_jail_rate_since_1990. 
+
+- This data includes 23 features (columns) and 91,031 observations (rows).
+
+When working with this data, and considering potential ethical limitations, it is critical to examine the larger context in which this information is being collected as well as potential errors that might have been committed in collecting this information. Within the US's criminal justice system, there are disproportionate numbers of people of color, as well as other marginalized identities. While this is a potential ethical limitation, it also presents as an issue with data processing as the collected information is skewed depending on the goals of the project.
+
+### Trends Over Time Chart
+
+This chart was included because it illustrates both the comparison between male v. female incarceration, as well as the total trends in incarceration over time. You can see that the ratio between male and female incarceration remains relatively stable with significantly more men in prison than women, but the total number of people in prison rises dramatically over time. 
+
+
+```{r, echo = FALSE, code = readLines("Chart1.R")}
+source("./Chart1.R")
+```
+
+### Variable Comparison Chart
+
+Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+
+The second chart that you will create and include will show how two different (continuous) variables are related to one another. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
+
+- You must have clear x and y axis labels
+- The chart needs a clear title
+- If you choose to add a color encoding (not required), you need a legend for your different color and a clear legend title
+
+```{r, echo = FALSE, code = readLines("Chart2.R")}
+source("./Chart2.R")
+```
+
+### Map
+
+Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+
+The last chart that you will create and include will show how a variable is distributed geographically. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
+
+- Your map needs a title
+- Your color scale needs a legend with a clear label
+- Use a map based coordinate system to set the aspect ratio of your map
+
