@@ -6,7 +6,7 @@ output: html_document
 
 ### Introduction
 
-As I explore trends related to crime, particularly the rates and stratification among racial groups throughout the United States, it is critical to gain a more in-depth understanding of the variables, namely those related to time, race, incarceration rate, arrest/jailed rate, gender, among others. These are critical to examine to gain insights on the forces that shape our contemporary understanding of differences that manifest across race and gender. It is crucial to grow in our understanding of these areas in order to begin to remedy many of the disproportinate impacts faced by people of color in our criminal justice system. 
+As I explore trends related to crime, particularly the rates and stratification among racial groups throughout the United States, it is critical to gain a more in-depth understanding of the variables, namely those related to time, race, incarceration rate, arrest/jailed rate, gender, among others. These are critical to examine to gain insights on the forces that shape our contemporary understanding of differences that manifest across race and gender. It is crucial to grow in our understanding of these areas in order to begin to remedy many of the disproportionate impacts faced by people of color in our criminal justice system. 
 
 
 ### Summary Information
