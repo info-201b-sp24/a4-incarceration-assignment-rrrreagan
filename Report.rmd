@@ -5,21 +5,13 @@ output: html_document
 ## Name: Reagan Ince
 
 ### Introduction
-An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
+
+As I explore trends related to crime, particularly the rates and stratification among racial groups throughout the United States, it is critical to gain a more in-depth understanding of the variables, namely those related to time, race, incarceration rate, arrest/jailed rate, gender, among others. These are critical to examine to gain insights on the forces that shape our contemporary understanding of differences that manifest across race and gender. It is crucial to grow in our understanding of these areas in order to begin to remedy many of the disproportinate impacts faced by people of color in our criminal justice system. 
+
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as:
-
-- What is the average value of my variable across all the counties (in the current year)?
-- Where is my variable the highest / lowest?
-- How much has my variable change over the last N years?
-
-Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
-
-As I reflect on the dataset focusing on crime rates, themes that I found most critical to highlight surround the discrepancy between different groups, namely differences among race, gender, location, etc. 
+As I reflect on the data set focusing on crime rates, themes that I found most critical to highlight surround the discrepancy between different groups, namely differences among race, gender, location, etc. 
 
 The questions I asked are as follows: 
 1) What is the average value of those jailed across all the counties per year?
@@ -30,7 +22,7 @@ The questions I asked are as follows:
 
 As I explored the answers to this question, I found that the average values of those jailed across all the counties per year begins at 64,951 and increases each year. Within this, I also found that 2007 is the year with the highest incarceration rate at 0.00413. Prison populations also tend to be primarily male, with a rate of male:female inmates in 2016 to be 1316:156. It was also found that Texas is the state with the highest rate of incarceration, and black people have the highest rate of incarceration. None of these findings particularly surprise me, rather it confirms many of the trends I have noticed in the larger socio-political network.
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 source("./summary.R")
 ```
 
@@ -51,7 +43,7 @@ When working with this data, and considering potential ethical limitations, it i
 This chart was included because it illustrates both the comparison between male v. female incarceration, as well as the total trends in incarceration over time. You can see that the ratio between male and female incarceration remains relatively stable with significantly more men in prison than women, but the total number of people in prison rises dramatically over time. 
 
 
-```{r, echo = FALSE, code = readLines("Chart1.R")}
+```{r, echo = FALSE, code = readLines("Chart1.R"), message=FALSE}
 source("./Chart1.R")
 ```
 
@@ -65,17 +57,18 @@ The second chart that you will create and include will show how two different (c
 - The chart needs a clear title
 - If you choose to add a color encoding (not required), you need a legend for your different color and a clear legend title
 
-```{r, echo = FALSE, code = readLines("Chart2.R")}
+```{r, echo = FALSE, code = readLines("Chart2.R"), message=FALSE, warning=FALSE}
 source("./Chart2.R")
 ```
 
 ### Map
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The last chart that you will create and include will show how a variable is distributed geographically. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
+This map provides an overview of the black incarceration rate across the United States. This provides insights on the geographical distribution of disproportionate punishment against people of color, particularly considering longstanding practices of discrimination and segregation in certain areas, which is reflected in the map. Patterns that emerged through this graph highlight the higher incarceration rate in states that implement vagrancy laws or similar laws that work to criminalize people based on their status. This can be seen through the criminalization of immigration, poverty, homelessness, etc., all which often intersect. States that have higher incarceration rates of black people are also those that have policies and laws reflective of these trends.
 
 - Your map needs a title
 - Your color scale needs a legend with a clear label
 - Use a map based coordinate system to set the aspect ratio of your map
 
+```{r, echo = FALSE, code = readLines("Chart3.R"), message=FALSE}
+source("./Chart3.R")
+```
